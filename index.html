@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join the Chamber</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<main class="membership-page">
+
+  <section class="hero">
+    <h1>Join the Chamber</h1>
+
+    <div class="join-tabs">
+      <a href="https://www.zeffy.com/en-US/ticketing/indian-valley-chamber-of-commerces-memberships">online</a>
+      <a href="https://indianvalleychamber.org/wp-content/uploads/2024/08/IVCC-Membership-Form-2024-25.pdf">by mail</a>
+    </div>
+
+    <img src="bank.jpg" alt="Historic Indian Valley bank building" class="hero-photo" />
+  </section>
+
+  <section class="benefits-section">
+    <h2 class="vertical-title">Benefits</h2>
+
+    <div class="benefits-grid">
+      <div class="benefit reveal">
+        <h3>Visibility</h3>
+        <p>Increase your visibility through the Chamber website, social media, and business directory.</p>
+      </div>
+
+      <div class="benefit reveal">
+        <h3>Credibility</h3>
+        <p>Build credibility by joining a trusted network of local businesses and organizations.</p>
+      </div>
+
+      <div class="benefit reveal">
+        <h3>Connection</h3>
+        <p>Connect with other members through Chamber networking events hosted throughout Indian Valley.</p>
+      </div>
+
+      <div class="benefit reveal">
+        <h3>Promotion</h3>
+        <p>Help promote tourism, shopping local, and community pride.</p>
+      </div>
+
+      <div class="benefit reveal">
+        <h3>Community</h3>
+        <p>Support the events and initiatives that bring our communities together.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="memberships">
+    <h2>Memberships</h2>
+
+    <div class="membership-grid">
+
+      <article class="membership-card">
+        <div class="photo-wrap">
+          <img src="church.jpg" alt="Church being rebuilt in Indian Valley" />
+          <span class="photo-credit">Photography © Heather Kingdon</span>
+        </div>
+        <h3>Organization</h3>
+        <p>$60 Annual Membership</p>
+      </article>
+
+      <article class="membership-card">
+        <div class="photo-wrap">
+          <img src="cows.jpg" alt="Cattle in Indian Valley" />
+          <span class="photo-credit">Photography © Heather Kingdon</span>
+        </div>
+        <h3>Business</h3>
+        <p>$75 Annual Membership</p>
+      </article>
+
+      <article class="membership-card">
+        <div class="photo-wrap">
+          <img src="cowgirl.jpg" alt="Cowgirl in Indian Valley" />
+          <span class="photo-credit">Photography © Heather Kingdon</span>
+        </div>
+        <h3>Individual</h3>
+        <p>$40 Annual Membership</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="why-join">
+    <h2>Why<br>Join?</h2>
+
+    <p>
+      A membership in the Indian Valley Chamber of Commerce is an investment in the
+      businesses, organizations, and people who make our valley unique. Together we
+      promote local businesses, support community events, encourage tourism, and
+      strengthen Indian Valley for residents and visitors alike.
+    </p>
+  </section>
+
+  <section class="bottom-cta">
+    <a href="https://www.zeffy.com/en-US/ticketing/indian-valley-chamber-of-commerces-memberships">join online</a>
+    <a href="https://indianvalleychamber.org/wp-content/uploads/2024/08/IVCC-Membership-Form-2024-25.pdf">join by mail</a>
+  </section>
+
+  <section class="update-section">
+    <img src="new_bank.jpg" alt="Indian Valley Chamber membership update background" />
+
+    <div class="update-content">
+      <h2>Membership Info Update</h2>
+      <a href="#">Update Now ⮞</a>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        entry.target.style.transitionDelay = `${index * 90}ms`;
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  reveals.forEach(item => observer.observe(item));
+</script>
+
+</body>
+</html>
